@@ -1,0 +1,12 @@
+.ta-center {
+    text-align: center;
+}
+
+.dark-btn {
+    background-color: #1c1b1b;
+    color: #ffffff;
+    border: none;
+    height: 38px;
+    border-radius: 15px;
+    font-size: 22px;
+}

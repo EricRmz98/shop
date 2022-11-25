@@ -1,0 +1,26 @@
+.sign-in-header {
+    background-color: #1c1b1b;
+    height: 178px;
+    width: 100%;
+}
+
+.sign-in-container {
+    width: 312px;
+    margin: 0 auto;
+    margin-top: 76px;
+}
+
+.sign-in-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-container input {
+    border: 1px solid #1c1b1b;
+    border-radius: 15px;
+    height: 38px;
+    margin-top: 10px;
+    margin-bottom: 38px;
+    font-size: 22px;
+    padding-left: 15px;
+}
