@@ -1,0 +1,21 @@
+.close-session-container {
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(28, 27, 27, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+}
+
+.close-session-pop-up {
+    background-color: white;
+    border: 1px solid #1c1b1b;
+    height: 180px;
+    width: 311px;
+    text-align: center;
+    display: flex;
+}

@@ -2,27 +2,37 @@ import axios from 'axios';
 import { useState } from 'react';
 
 //utils
-import { setLocalToken, clearLocalToken } from '../utils/token';
+import { setLocalName, setLocalToken } from '../utils/localStorage';
 
 //styles
 import '../styles/singIn.css';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [token, setToken] = useState('');
+
+    const navigate = useNavigate();
 
     const submitSignInForm = (e) => {
         e.preventDefault();
 
         const form = {
-            nombre: name,
-            email,
+            nombre: name.trim(),
+            email: email.trim(),
         };
 
-        axios
-            .post('https://examen.pitayasoft.mx/api/User/Registro', form)
-            .then((res) => setLocalToken(res.data.id));
+        if (name.trim() != '' && email.trim() != '') {
+            axios
+                .post('https://examen.pitayasoft.mx/api/User/Registro', form)
+                .then((res) => {
+                    setLocalToken(res.data.id);
+                    setLocalName(name);
+                    navigate('/session');
+                });
+        } else {
+            alert('Ingresa tu datos');
+        }
     };
 
     return (
