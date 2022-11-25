@@ -11,6 +11,16 @@
     font-size: 22px;
 }
 
+.light-btn {
+    background-color: transparent;
+    border: 1px solid #1c1b1b;
+    height: 38px;
+    border-radius: 15px;
+    font-size: 22px;
+    width: 350px;
+    letter-spacing: 2px;
+}
+
 .transparent-btn {
     border: none;
     font-size: 18px;

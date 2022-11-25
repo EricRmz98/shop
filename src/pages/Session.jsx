@@ -18,6 +18,8 @@ const Session = () => {
 
     const [showCloseSession, setShowCloseSession] = useState(false);
 
+    const navigate = useNavigate();
+
     const togglePopUp = () => {
         setShowCloseSession(!showCloseSession);
     };
@@ -35,6 +37,7 @@ const Session = () => {
             <div className="session-container">
                 <div>
                     <p>0/0</p>
+                    <button className="light-btn">Escanea tus productos</button>
                 </div>
                 <div>
                     <button

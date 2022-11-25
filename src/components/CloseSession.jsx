@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 //styles
 import '../styles/closeSession.css';
+import { clearLocal } from '../utils/localStorage';
 
 const CloseSession = ({ togglePopUp }) => {
     const navigate = useNavigate();
 
     const closeSession = () => {
+        togglePopUp();
         clearLocal();
         navigate('/');
     };
@@ -20,9 +23,19 @@ const CloseSession = ({ togglePopUp }) => {
                         <br />
                         la sesión?
                     </p>
-                    <div>
-                        <button onClick={closeSession()}>Si</button>
-                        <button onClick={togglePopUp}>No</button>
+                    <div className="close-btn-container">
+                        <button
+                            className="close-light-btn"
+                            onClick={closeSession}
+                        >
+                            Si
+                        </button>
+                        <button
+                            className="close-dark-btn"
+                            onClick={togglePopUp}
+                        >
+                            No
+                        </button>
                     </div>
                 </div>
             </div>

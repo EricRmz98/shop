@@ -18,4 +18,31 @@
     width: 311px;
     text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-light-btn {
+    width: 70px;
+    background-color: transparent;
+    border: none;
+    height: 38px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.close-dark-btn {
+    width: 70px;
+    border: none;
+    background-color: #1c1b1b;
+    color: white;
+    height: 38px;
+    border-radius: 15px;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
