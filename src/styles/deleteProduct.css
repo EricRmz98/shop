@@ -1,0 +1,15 @@
+.delete-product-pop-up {
+    background-color: white;
+    border: 1px solid #1c1b1b;
+    height: 180px;
+    width: 311px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-product-btn-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,18 +1,18 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-//utils
-import { setLocalName, setLocalToken } from '../utils/localStorage';
-
 //styles
 import '../styles/singIn.css';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../store/slices/user.slice';
 
 const SignIn = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const submitSignInForm = (e) => {
         e.preventDefault();
@@ -26,8 +26,7 @@ const SignIn = () => {
             axios
                 .post('https://examen.pitayasoft.mx/api/User/Registro', form)
                 .then((res) => {
-                    setLocalToken(res.data.id);
-                    setLocalName(name);
+                    dispatch(setUser({ name, token: res.data.id }));
                     navigate('/session');
                 });
         } else {

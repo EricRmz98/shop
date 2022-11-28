@@ -12,13 +12,67 @@
 }
 
 .session-container {
-    padding-top: 76px;
-    padding-bottom: 38px;
     text-align: center;
-    height: calc(100vh - 118px - 55px);
+    min-height: calc(100vh - 118px - 55px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.session-btn-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 350px;
+    gap: 19px;
+}
+
+.session-dark-btn {
+    background-color: #1c1b1b;
+    color: #ffffff;
+    border: none;
+    height: 38px;
+    border-radius: 15px;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.session-light-btn {
+    background-color: transparent;
+    border: 1px solid #1c1b1b;
+    height: 38px;
+    border-radius: 15px;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.session-clear-cart-btn {
+    background-color: transparent;
+    border: 1px solid #1c1b1b;
+    height: 38px;
+    width: 284px;
+    border-radius: 15px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin: 0 auto;
+}
+
+.session-transparent-btn {
+    margin: 38px auto;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    letter-spacing: 3px;
+    width: 170px;
+}
+
+.session-counter-0 {
+    margin-top: 57px;
+    margin-bottom: 19px;
+}
+
+.session-counter {
+    margin: 19px 0;
 }
 
 .session-footer {
